@@ -124,13 +124,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleConfig2.cs" />
+    <Compile Include="App_Start\BundleConfig3.cs" />
+    <Compile Include="App_Start\BundleConfig4.cs" />
+    <Compile Include="App_Start\BundleConfig5.cs" />
+    <Compile Include="App_Start\BundleConfig6.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FilterConfig2.cs" />
+    <Compile Include="App_Start\FilterConfig3.cs" />
+    <Compile Include="App_Start\FilterConfig4.cs" />
+    <Compile Include="App_Start\FilterConfig5.cs" />
+    <Compile Include="App_Start\FilterConfig6.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\RouteConfig2.cs" />
+    <Compile Include="App_Start\RouteConfig3.cs" />
+    <Compile Include="App_Start\RouteConfig4.cs" />
+    <Compile Include="App_Start\RouteConfig5.cs" />
+    <Compile Include="App_Start\RouteConfig6.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MyPurchasesController.cs" />
+    <Compile Include="Controllers\ViewCartController.cs" />
+    <Compile Include="DB\CartData.cs" />
+    <Compile Include="DB\Data.cs" />
+    <Compile Include="DB\ProductData.cs" />
+    <Compile Include="DB\PurchaseData.cs" />
+    <Compile Include="DB\UserData.cs" />
+    <Compile Include="Filters\Fliter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Timestamp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -168,10 +199,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Gallery\Gallery.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\MyPurchases\MyPurchases.cshtml" />
+    <Content Include="Views\ViewCart\ViewCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
