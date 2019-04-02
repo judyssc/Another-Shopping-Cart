@@ -1,0 +1,45 @@
+﻿body {
+    font-family: 'verdana';
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #117A65;
+}
+
+li:first-child {
+    float: left;
+    padding-left: .6em;
+}
+
+li {
+    float: right;
+    padding-right: .6em;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+        
+        li a:hover {
+            background-color: #111;
+        }
+
+table {
+    line-height: 1.8;
+    font-family: 'verdana';
+}
+
+input[type=submit] {
+    font-family: Verdana;
+    color: white;
+    background: grey;
+}
