@@ -11,7 +11,7 @@ namespace S_cart.Controllers
         // GET: MyPurchases
         public ActionResult MyPurchases()
         {
-            // Code for manage activation codes method
+            
             return View();
         }
 
