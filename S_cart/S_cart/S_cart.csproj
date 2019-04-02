@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MyPurchasesController.cs" />
+    <Compile Include="Controllers\PartialViewsController.cs" />
     <Compile Include="Controllers\ViewCartController.cs" />
     <Compile Include="DB\CartData.cs" />
     <Compile Include="DB\Data.cs" />
@@ -190,9 +191,14 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\MyPurchases\MyPurchases.cshtml" />
     <Content Include="Views\ViewCart\ViewCart.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Views\Shared\_MyPurchases.cshtml" />
+    <Content Include="Views\Shared\_Gallery.cshtml" />
+    <Content Include="Views\Shared\_ViewCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PartialViews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

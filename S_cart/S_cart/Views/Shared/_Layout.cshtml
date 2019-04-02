@@ -1,26 +1,59 @@
-﻿<!DOCTYPE html>
+﻿@using S_cart.Models;
+@{
+    User user = (User)ViewData["user"];
+    string type = (string)ViewData["type"];
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <link rel=stylesheet href="~/Content/Judy.css" />
-   
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-   
+
 </head>
+
 <body>
-    
-    <ul>
-        <li>@Html.ActionLink("The .NET Shop", "Index", "Home")</li>
-        <li>@Html.ActionLink("Logout", "Index", "Home")</li>
-        <li>@Html.ActionLink("My Purchases", "MyPurchases", "MyPurchases")</li>
-        <li>
-            <a href="@Url.Action("ViewCart", "ViewCart")" title="View Cart" class="links">
-                <img alt="View Cart" src="@Url.Content("~/Images/shopping_cart_PNG4.png")" height="25">
-            </a>
-        </li>
-    </ul>
-    
+    @{
+        <ul>
+            <li>@Html.ActionLink("The .NET Shop", "Index", "Home", new { type = "gallery" }, new { })</li>
+            <li>@Html.ActionLink("Logout", "Index", "Home", new { type = "login" }, new { })</li>
+            <li>@Html.ActionLink("My Purchases", "MyPurchases", "MyPurchases", new { type = "mypurchases" }, new { })</li>
+            <li>
+                <a href="@Url.Action("ViewCart", "ViewCart", new RouteValueDictionary (new { type = "viewcart" }))" title="View Cart" class="links">
+                    <img alt="View Cart" src="@Url.Content("~/Images/shopping_cart_PNG4.png")" height="25">
+                </a>
+            </li>
+        </ul>
+
+        //Request.QueryString gets parameter from URL
+        var page = Request.QueryString["type"];
+
+
+        if (page == "login")
+        {
+            @Html.Partial("_Login")
+        }
+
+        else if (page == "gallery")
+        {
+            @Html.Partial("_Gallery")
+        }
+
+        else if (page == "viewcart")
+            {
+                @Html.Partial("_ViewCart")
+            }
+
+        else if (page == "mypurchases")
+            {
+                @Html.Partial("_MyPurchases")
+            }
+
+    }
+
     <div class="container body-content">
         @RenderBody()
         <hr />
