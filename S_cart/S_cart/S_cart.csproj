@@ -135,6 +135,7 @@
     <Compile Include="DB\Data.cs" />
     <Compile Include="DB\ProductData.cs" />
     <Compile Include="DB\PurchaseData.cs" />
+    <Compile Include="DB\SessionData.cs" />
     <Compile Include="DB\UserData.cs" />
     <Compile Include="Filters\Fliter.cs" />
     <Compile Include="Global.asax.cs">
