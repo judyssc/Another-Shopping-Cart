@@ -9,7 +9,7 @@ namespace S_cart.Controllers
 {
     public class PartialViewController : Controller
     {
-        // GET: PartialView
+        // GET: PartialView,
         public ActionResult Index()
         {
             return View();
