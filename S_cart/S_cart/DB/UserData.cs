@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using S_cart.Models;
 using System.Diagnostics;
+using System.Web.Configuration;
 
 namespace S_cart.DB
 {
@@ -17,8 +18,9 @@ namespace S_cart.DB
 
             //Able to use connection string freely as UserData is inherited
             //from Data parent class
-            using (SqlConnection conn = new SqlConnection(Data.connectionString))
-            {
+            //using (SqlConnection conn = new SqlConnection(Data.connectionString))
+            //{
+            SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["conn"].ConnectionString);
                 conn.Open();
 
                 string sql = @"SELECT user_id, username, password from user_info
@@ -34,7 +36,7 @@ namespace S_cart.DB
                         Password = (string)reader["password"]
                     };
                 }
-            }
+            //}
             return user;    //pass to calling function (Login controller)
         }
     }

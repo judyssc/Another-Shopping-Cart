@@ -12,8 +12,6 @@ namespace S_cart.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
-        
         public ActionResult Login(string Username, string Password)
         {
             //Check if username is null
