@@ -16,19 +16,19 @@ namespace S_cart.Controllers
         
         public ActionResult Login(string Username, string Password)
         {
-            //Check if username is null
-            if (Username == null)
+            ////Check if username is null
+            //if (Username == null)
                 return View();
 
-            //Successful login by user
-            //Call database (UserData.cs)
-            User user = UserData.GetUserByUsername(Username);
-            if (user.Password != Password)
-                return View();  //Login screen(Index)
+            ////Successful login by user
+            ////Call database (UserData.cs)
+            //User user = UserData.GetUserByUsername(Username);
+            //if (user.Password != Password)
+            //    return View();  //Login screen(Index)
 
-            //Start new session
-            string sessionId = Data.CreateSession(user.Id);
-            return RedirectToAction("Search", "Gallery", new { sessionId });
+            ////Start new session
+            //string sessionId = Data.CreateSession(user.Id);
+            //return RedirectToAction("Search", "Gallery", new { sessionId });
         }
     }
 }

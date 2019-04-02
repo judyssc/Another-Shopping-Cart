@@ -9,7 +9,7 @@ namespace S_cart.Controllers
     public class ViewCartController : Controller
     {
         // GET: ViewCart
-        public ActionResult Index()
+        public ActionResult ViewCart()
         {
             return View();
         }

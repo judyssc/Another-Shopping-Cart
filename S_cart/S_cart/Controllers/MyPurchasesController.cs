@@ -9,7 +9,12 @@ namespace S_cart.Controllers
     public class MyPurchasesController : Controller
     {
         // GET: MyPurchases
-        
+        public ActionResult MyPurchases()
+        {
+            // Code for manage activation codes method
+            return View();
+        }
+
         public ActionResult ManageActivation()
         {
             // Code for manage activation codes method
