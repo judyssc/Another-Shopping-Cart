@@ -35,18 +35,7 @@ namespace S_cart.Controllers
             return RedirectToAction("Search", "Gallery", new { sessionId });
         }
 
-        [HttpPost]
-        //public ActionResult Index(Models.Login viewModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(viewModel);
-        //    }
-
-        //    return Content("Success");
-        //}
-
-        //[AllowAnonymous]
+        [HttpPost]     
         public JsonResult IsChecked(string Username)
         {
             if (Regex.IsMatch(Username.ToString(), "^[a-zA-Z0-9]+$"))
