@@ -143,8 +143,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\list_product_helper.cs" />
     <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\product.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,6 +196,7 @@
     <Content Include="Views\Shared\_MyPurchases.cshtml" />
     <Content Include="Views\Shared\_Gallery.cshtml" />
     <Content Include="Views\Shared\_ViewCart.cshtml" />
+    <Content Include="Views\Gallery\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using S_cart.Models;
 
 namespace S_cart.Controllers
 {
@@ -12,6 +13,10 @@ namespace S_cart.Controllers
         
         public ActionResult Search()
         {
+            list_product_helper new_1 = new list_product_helper();
+            List<product> L1 = new_1.list_products();
+            ViewData["list"] = L1;
+                    
             // Code for search method (if needed)
             return View();
         }

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<div>
+    <i class="fa" style="font-size:24px">&#xf07a;</i>
+    <span> 6 </span>
+</div>
+
+<h2>ListProducts</h2>
+
+@model S_cart.Models.product
+@using S_cart.Models;
+
+
+
+@{
+    <table align="center" cellpadding="15" style="text-align:center">
+        <tr align="center" style="text-align:center; font-size:large">
+            <th>
+                Product_id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+
+        @foreach (product item in ViewBag.list)
+        {
+            <tr>
+                <td>@item.product_id</td>
+                <td>@item.name</td>
+                <td><img src="@item.url" height="200" width="200" /></td>
+                <td>@item.description</td>
+                <td>@item.price</td>
+                @*<td>
+                        <span>Quantity</span>
+                        <input type="number" value="1"/>
+                    </td>*@
+                <td>
+                    <input type="submit" value="ADD TO CART" id="@item.product_id" class="add_to_cart" />
+                </td>
+            </tr>
+        }
+
+    </table>
+    foreach (product item in ViewBag.list)
+    {
+        <div class="grid-container">
+            <div>
+                <img src="@item.url" height="200" width="200" />
+                <div>
+                    <span>@item.name</span><br />
+                    <span>@item.description</span>
+                </div>
+                <div>@item.price $ </div>
+            </div>
+        </div>
+    }
+}
+<style>
+    .grid-container {
+        /*display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;*/
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 5px;
+        }
+</style>
+
+
+
+
+
+

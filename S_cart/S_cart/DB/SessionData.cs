@@ -11,22 +11,24 @@ namespace S_cart.DB
     {
         public static bool IsActiveSessionId(string sessionId)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            
+            using (SqlConnection conn = new SqlConnection(Data.connectionString))
             {
                 conn.Open();
                 string sql = @"SELECT COUNT(*) FROM user_info
-                    WHERE session_id = '" + sessionId + "'";
+                    WHERE sessionId = '" + sessionId + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 int count = (int)cmd.ExecuteScalar();
-                return (count == 1);    //return count = 1 for active session 
+                return (count == 1);
             }
         }
 
         public static string CreateSession(int userId)
         {
+            
             string sessionId = Guid.NewGuid().ToString();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Data.connectionString))
             {
                 conn.Open();
                 string sql = @"UPDATE user_info SET session_id = '" + sessionId + "'" +
@@ -40,12 +42,12 @@ namespace S_cart.DB
 
         public static void RemoveSession(string sessionId)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            
+            using (SqlConnection conn = new SqlConnection(Data.connectionString))
             {
                 conn.Open();
-                //Update SessionId
-                string sql = @"UPDATE user_id SET session_id = NULL 
-                    WHERE session_id =" + sessionId;
+                string sql = @"UPDATE user_info SET session_id = NULL 
+                    WHERE session_id = '" + sessionId + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }

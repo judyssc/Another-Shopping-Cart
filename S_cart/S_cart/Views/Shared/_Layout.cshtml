@@ -11,22 +11,30 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>@ViewBag.Title - My ASP.NET Application</title>
 
 </head>
 
 <body>
     @{
-        <ul>
-            <li>@Html.ActionLink("The .NET Shop", "Index", "Home", new { type = "gallery" }, new { })</li>
-            <li>@Html.ActionLink("Logout", "Index", "Home", new { type = "login" }, new { })</li>
-            <li>@Html.ActionLink("My Purchases", "MyPurchases", "MyPurchases", new { type = "mypurchases" }, new { })</li>
-            <li>
-                <a href="@Url.Action("ViewCart", "ViewCart", new RouteValueDictionary (new { type = "viewcart" }))" title="View Cart" class="links">
-                    <img alt="View Cart" src="@Url.Content("~/Images/shopping_cart_PNG4.png")" height="25">
-                </a>
-            </li>
-        </ul>
+    <ul>
+        <li>@Html.ActionLink("The .NET Shop", "Index", "Home", new { type = "gallery" }, new { })</li>
+        <li>@Html.ActionLink("Logout", "Index", "Home", new { type = "login" }, new { })</li>
+        <li>@Html.ActionLink("My Purchases", "MyPurchases", "MyPurchases", new { type = "mypurchases" }, new { })</li>
+        @*<li>100</li>*@
+        <li>
+            <a href="@Url.Action("ViewCart", "ViewCart", new RouteValueDictionary (new { type = "viewcart" }))" title="View Cart" class="links">
+                <img alt="View Cart" src="@Url.Content("~/Images/shopping_cart_PNG4.png")" height="25">
+                @*<i class="fa" style="font-size:24px">&#xf07a;</i>*@
+            </a>
+        </li>
+
+
+
+    </ul>
 
         //Request.QueryString gets parameter from URL
         var page = Request.QueryString["type"];
