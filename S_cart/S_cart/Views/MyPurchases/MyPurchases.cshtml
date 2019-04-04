@@ -1,5 +1,78 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "MyPurchases";
 }
+
+@model S_cart.Models.Purchase
+@using S_cart.Models;
+
+@*@foreach (Purchase item in ViewBag.list)
+    {
+        <div class="productlist">
+            <div class="productimage"> <img src="@item.image" height="200" width="200" /></div>
+            <span><input type="hidden" name="productid" value="@item.productid" /><br /></span>
+            <span><input type="text" name="productname" value="@item.product_name" /><br /></span>
+            <span><textarea name="productdescription" rows="2" wrap="soft" cols="65" value="@item.productdesc">@item.productdesc</textarea><br /><br /></span>
+            <div class="formdescription">
+                <span>Purchased On:<input type="text" name="purchasedate" value="@item.purchasedate" /></span><br />
+                <span>Quantity: <input type="text" name="quantity" value="@item.quantity" /></span><br />
+                <span>Activation Code:<input type="text" name="activationcode" value="@item.activationcode" /></span><br />
+            </div>
+        </div>
+    }*@
+
+@foreach (Purchase item in ViewBag.list)
+{
+    <div class="productlist">
+        <div class="productimage"> <img src="@item.image" height="200" width="200" /></div>
+
+        <div class="formdescription">
+            <span><input type="hidden" name="productid" value="@item.productid" /><br /></span>
+            <span><input type="text" name="productname" value="@item.product_name" /><br /></span>
+            <span><textarea name="productdescription" rows="2" wrap="soft" cols="65" value="@item.productdesc">@item.productdesc</textarea><br /><br /></span>
+            <span>Purchased on: <input type="text" name="purchasedate" value="@item.purchasedate" /></span><br />
+            <span>Quantity: <input type="text" name="quantity" value="@item.quantity" /></span><br />
+            <span>Activation Code: <input type="text" name="activationcode" value="@item.activationcode" /></span><br />
+        </div>
+
+    </div>
+}
+
+@*<tr align="center" style="text-align:center; font-size:large">
+                <td><img src="@item.image" height="200" width="200" /></td>
+                <td>Purchased On:</td>
+                <td>@item.purchasedate</td>
+            </tr>
+        </div>
+        <tbody class="blue">
+            <tr>
+                <td>@item.product_name</td>
+                <td>Quantity:</td>
+                <td>@item.quantity</td>
+            </tr>
+            <tr>
+                <td>@item.productdesc</td>
+                <td>Activation code:</td>
+                <td>[Activation code]</td>
+            </tr>
+        </tbody>
+    }*@
+
+
+@*@foreach (Purchase item in ViewBag.list)
+    {
+        <div class="productlist">
+            <div class="productimage"><img src="@item.image" height="200" width="200" /></div>
+            <span><input type="hidden" name="productid" value="@item.productid" /><br /></span>
+            <span><input type="text" name="productname" value="@item.product_name" /><br /></span>
+            <span><textarea name="description" rows="2" wrap="soft" cols="65" value="@item.productdesc">@item.productdesc</textarea><br /><br /></span>
+        </div>
+        <form class="products">
+            <div class="description">
+                <span><input type="hidden" name="productid" value="@item.productid" /><br /></span>
+                <span><input type="text" name="productname" value="@item.product_name" /><br /></span>
+                <span><textarea name="description" rows="2" wrap="soft" cols="65" value="@item.productdesc">@item.productdesc</textarea><br /><br /></span>
+            </div>
+        </form>
+    }*@
 
 

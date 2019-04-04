@@ -127,10 +127,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\MyPurchasesController.cs" />
-    <Compile Include="Controllers\PartialViewsController.cs" />
     <Compile Include="Controllers\ViewCartController.cs" />
     <Compile Include="DB\CartData.cs" />
     <Compile Include="DB\Data.cs" />
@@ -182,25 +181,21 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Gallery\Gallery.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\MyPurchases\MyPurchases.cshtml" />
-    <Content Include="Views\ViewCart\ViewCart.cshtml" />
-    <Content Include="Views\Shared\_Login.cshtml" />
-    <Content Include="Views\Shared\_MyPurchases.cshtml" />
-    <Content Include="Views\Shared\_Gallery.cshtml" />
-    <Content Include="Views\Shared\_ViewCart.cshtml" />
     <Content Include="Views\Gallery\Search.cshtml" />
+    <Content Include="Views\ViewCart\ViewCart.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_greeting.cshtml" />
+    <Content Include="Views\Shared\_LayoutforLogin.cshtml" />
+    <Content Include="Views\Gallery\AddtoCart.cshtml" />
+    <Content Include="Views\Gallery\AddtoCart1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\PartialViews\" />
+    <Folder Include="Views\Logout\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

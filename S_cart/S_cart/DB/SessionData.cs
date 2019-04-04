@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 namespace S_cart.DB
 {
     // Handle all queries pertaining to Session
-    public class SessionData : Data
+    
+public class SessionData : Data
     {
+        static string session_id;
         public static bool IsActiveSessionId(string sessionId)
         {
             
@@ -16,7 +18,7 @@ namespace S_cart.DB
             {
                 conn.Open();
                 string sql = @"SELECT COUNT(*) FROM user_info
-                    WHERE sessionId = '" + sessionId + "'";
+                    WHERE session_Id = '" + sessionId + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 int count = (int)cmd.ExecuteScalar();
                 return (count == 1);
@@ -51,6 +53,11 @@ namespace S_cart.DB
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        public static string getSessionId()
+        {
+            return session_id;
         }
     }
 }

@@ -9,6 +9,6 @@ namespace S_cart.DB
     {
         //create the connection string
         //Change the SERVER Name to what is shown on your SQL Server Management Studio
-        public static string connectionString = "Server=DESKTOP-BINNY;" + "Database=ca_SHOPPING;" + "Integrated Security=true";
+        public static string connectionString = "Server=DELL;" + "Database=ca_SHOPPING;" + "Integrated Security=true";
     }
 }

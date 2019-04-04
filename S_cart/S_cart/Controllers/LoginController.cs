@@ -35,10 +35,11 @@ namespace S_cart.Controllers
             }
             if (user.Password != hashpwd)
                 return View();  //Login screen(Index)
-
+            Debug.WriteLine(user.Id);
+            Debug.WriteLine(user.Username);
             //Start new session
             string sessionId = SessionData.CreateSession(user.Id);
-            return RedirectToAction("Search", "Gallery", new { sessionId });
+            return RedirectToAction("Search", "Gallery", new {ses_id = sessionId, fname = user.FirstName,lname=user.LastName, uid=user.Id});
         }
 
         [HttpPost]     
